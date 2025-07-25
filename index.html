@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home - Prukhi & [Partner's Name]</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #fdfaf6;
+      color: #333;
+    }
+    .section-padding {
+      padding: 4rem 1rem;
+    }
+    @media (min-width: 768px) {
+      .section-padding {
+        padding: 6rem 2rem;
+      }
+    }
+    @media (min-width: 1024px) {
+      .section-padding {
+        padding: 8rem 4rem;
+      }
+    }
+    .btn-primary {
+      @apply px-6 py-3 bg-pink-600 text-white font-semibold rounded-lg shadow-md hover:bg-pink-700 transition-colors duration-300 transform hover:scale-105;
+    }
+  </style>
+</head>
+<body class="overflow-x-hidden flex flex-col min-h-screen">
+
+  <!-- Navbar -->
+  <nav class="bg-white shadow-md px-4 py-1 flex items-center justify-between">
+  <div class="flex items-center space-x-2">
+    <img src="pink.jpg" alt="Prukhi Wedding Logo" class="w-10 h-10 rounded-full shadow-md" />
+    <span class="text-lg font-bold text-gray-800">Prukhi</span>
+  </div>
+
+      <div class="block lg:hidden">
+        <button id="nav-toggle" class="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-gray-800 hover:border-gray-800">
+          <svg class="fill-current h-3 w-3" viewBox="0 0 20 20"><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v15z"/></svg>
+        </button>
+      </div>
+      <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block" id="nav-content">
+        <ul class="text-lg lg:flex justify-end items-center mt-4 lg:mt-0 lg:space-x-8 w-full">
+          <li><a href="index.html" class="block mt-4 lg:inline-block text-gray-700 hover:text-pink-600 p-2">Home</a></li>
+          <li><a href="our-story.html" class="block mt-4 lg:inline-block text-gray-700 hover:text-pink-600 p-2">Our Story</a></li>
+          <li><a href="gallery.html" class="block mt-4 lg:inline-block text-gray-700 hover:text-pink-600 p-2">Gallery</a></li>
+          <li><a href="rsvp.html" class="block mt-4 lg:inline-block text-gray-700 hover:text-pink-600 p-2">RSVP</a></li>
+          <li><a href="contact.html" class="block mt-4 lg:inline-block text-gray-700 hover:text-pink-600 p-2">Contact</a></li>
+          <li><a href="login.html" class="block mt-4 lg:inline-block text-gray-700 hover:text-pink-600 p-2">Login</a></li>
+          <li><a href="register.html" class="block mt-4 lg:inline-block text-gray-700 hover:text-pink-600 p-2">Register</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="relative text-white h-[80vh] px-6 mx-4 mt-6 rounded-lg overflow-hidden bg-pink-600 bg-opacity-40 shadow-lg">
+  <div class="flex items-center justify-center h-full">
+    <div class="text-center max-w-3xl mx-auto">
+      <h1 class="text-5xl font-bold text-pink-700 mb-10">Prukhi & [Partner's Name]</h1>
+      <p class="text-xl md:text-2xl mb-6">Joyfully invite you to celebrate their wedding!</p>
+      <p class="text-lg md:text-xl font-light">Join us as we embark on our lifelong journey together.</p>
+      <a href="our-story.html"
+   class="mt-8 inline-block px-6 py-3 bg-white text-pink-600 font-semibold rounded-lg shadow-md hover:bg-pink-600 hover:text-white transition duration-300">
+  Learn More
+</a>
+  </div>
+  </div>
+</section>
+    <!-- Footer (Repeated for consistency across pages) -->
+    <footer class="bg-gray-800 text-white text-center p-6 rounded-t-lg mx-4 mt-8">
+        <p>&copy; 2024 Prukhi & [Partner's Name]. All Rights Reserved.</p>
+        <p class="mt-2">Made with love for our special day.</p>
+    </footer>
+
+
+  
+  <!-- Navbar toggle script -->
+  <script>
+    const navToggle = document.getElementById('nav-toggle');
+    const navContent = document.getElementById('nav-content');
+
+    if (navToggle && navContent) {
+      navToggle.addEventListener('click', () => {
+        navContent.classList.toggle('hidden');
+      });
+
+      navContent.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          if (!navContent.classList.contains('hidden') && window.innerWidth < 1024) {
+            navContent.classList.add('hidden');
+          }
+        });
+      });
+    }
+  </script>
+</body>
+</html>

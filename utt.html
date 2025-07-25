@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prukhi & [Partner's Name] - Our Wedding</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Inter font for a modern look -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    
+</head>
+<body class="overflow-x-hidden">
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md p-4 sticky top-0 z-50 rounded-b-lg">
+        <div class="container mx-auto flex justify-between items-center flex-wrap">
+            <!-- Logo on the left -->
+            <div class="flex items-center space-x-2">
+                <img src="https://placehold.co/50x50/F0D9C1/4A2C2A?text=Prukhi+Logo" alt="Prukhi Wedding Logo" class="rounded-full shadow-md">
+                <span class="text-2xl font-bold text-gray-800">Prukhi</span>
+            </div>
+
+            <!-- Mobile menu button -->
+            <div class="block lg:hidden">
+                <button id="nav-toggle" class="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-gray-800 hover:border-gray-800">
+                    <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v15z"/></svg>
+                </button>
+            </div>
+
+            <!-- Navbar links -->
+            <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block" id="nav-content">
+                <ul class="text-lg lg:flex justify-end items-center mt-4 lg:mt-0 lg:space-x-8 w-full">
+                    <li><a href="#home" class="block mt-4 lg:inline-block lg:mt-0 text-gray-700 hover:text-pink-600 transition-colors duration-200 p-2 rounded-md">Home</a></li>
+                    <li><a href="#our-story" class="block mt-4 lg:inline-block lg:mt-0 text-gray-700 hover:text-pink-600 transition-colors duration-200 p-2 rounded-md">Our Story</a></li>
+                    <li><a href="#gallery" class="block mt-4 lg:inline-block lg:mt-0 text-gray-700 hover:text-pink-600 transition-colors duration-200 p-2 rounded-md">Gallery</a></li>
+                    <li><a href="#rsvp" class="block mt-4 lg:inline-block lg:mt-0 text-gray-700 hover:text-pink-600 transition-colors duration-200 p-2 rounded-md">RSVP</a></li>
+                    <li><a href="#contact" class="block mt-4 lg:inline-block lg:mt-0 text-gray-700 hover:text-pink-600 transition-colors duration-200 p-2 rounded-md">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg relative text-white section-padding rounded-lg mx-4 mt-4 overflow-hidden">
+        <div class="hero-overlay rounded-lg"></div>
+        <div class="relative z-10 p-6 glassmorphism rounded-lg max-w-2xl mx-auto">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">Prukhi & [Partner's Name]</h1>
+            <p class="text-xl md:text-2xl mb-6">Joyfully invite you to celebrate their wedding!</p>
+            <p class="text-lg md:text-xl font-light">Join us as we embark on our lifelong journey together.</p>
+            <button class="btn-primary mt-8">Learn More</button>
+        </div>
+    </section>
+
+    <!-- Our Story Section -->
+    <section id="our-story" class="section-padding bg-gradient-to-br from-pink-50 to-purple-50 text-center rounded-lg mx-4 mt-8 shadow-inner">
+        <div class="container mx-auto max-w-4xl">
+            <h2 class="text-4xl font-bold text-pink-700 mb-8">Our Story</h2>
+            <div class="flex flex-col md:flex-row items-center md:space-x-8 space-y-8 md:space-y-0">
+                <div class="md:w-1/2 card">
+                    <img src="C:\vadina\anu.jpg" alt="Prukhi's Photo" class="w-full h-auto rounded-lg mb-4 shadow-md">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-2">The Bride - Prukhi</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Prukhi's journey has been one of grace, strength, and boundless compassion. From her early days, she dreamed of a life filled with love and purpose, always putting others first. Her vibrant spirit and infectious laughter light up every room she enters.
+                    </p>
+                </div>
+                <div class="md:w-1/2 card">
+                    <img src="C:\vadina\prabha.jpg" alt="Partner's Photo" class="w-full h-auto rounded-lg mb-4 shadow-md">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-2">The Groom - [Partner's Name]</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        [Partner's Name] is a man of integrity and humor, whose steady presence brings comfort and joy. His adventurous spirit and unwavering support have been a constant source of inspiration. He always knew that true happiness lay in finding someone to share life's extraordinary moments with.
+                    </p>
+                </div>
+            </div>
+            <p class="text-lg text-gray-700 mt-10 leading-relaxed">
+                Our paths crossed at a serendipitous moment, and from that day forward, our lives intertwined. We fell in love amidst shared laughter, quiet conversations, and adventures big and small. Every moment with each other has been a cherished chapter in our unfolding story.
+            </p>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="section-padding bg-white text-center rounded-lg mx-4 mt-8 shadow-lg">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-bold text-purple-700 mb-10">Our Gallery</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Gallery Item 1 -->
+                <div class="card overflow-hidden transition-transform duration-300 hover:scale-105">
+                    <img src="https://placehold.co/400x300/EAD7A1/FFFFFF?text=Engagement" alt="Engagement Photo" class="w-full h-48 object-cover rounded-lg shadow-md mb-4">
+                    <h3 class="text-xl font-semibold text-gray-800">Engagement Day</h3>
+                </div>
+                <!-- Gallery Item 2 -->
+                <div class="card overflow-hidden transition-transform duration-300 hover:scale-105">
+                    <img src="https://placehold.co/400x300/F0D9C1/4A2C2A?text=Memories" alt="Memory Photo" class="w-full h-48 object-cover rounded-lg shadow-md mb-4">
+                    <h3 class="text-xl font-semibold text-gray-800">Cherished Memories</h3>
+                </div>
+                <!-- Gallery Item 3 -->
+                <div class="card overflow-hidden transition-transform duration-300 hover:scale-105">
+                    <img src="https://placehold.co/400x300/B0D5D5/2A4A4A?text=Journey" alt="Journey Photo" class="w-full h-48 object-cover rounded-lg shadow-md mb-4">
+                    <h3 class="text-xl font-semibold text-gray-800">Our Journey</h3>
+                </div>
+                <!-- Gallery Item 4 -->
+                <div class="card overflow-hidden transition-transform duration-300 hover:scale-105">
+                    <img src="https://placehold.co/400x300/EAD7A1/FFFFFF?text=Moments" alt="Moments Photo" class="w-full h-48 object-cover rounded-lg shadow-md mb-4">
+                    <h3 class="text-xl font-semibold text-gray-800">Candid Moments</h3>
+                </div>
+                <!-- Gallery Item 5 -->
+                <div class="card overflow-hidden transition-transform duration-300 hover:scale-105">
+                    <img src="https://placehold.co/400x300/F0D9C1/4A2C2A?text=Love" alt="Love Photo" class="w-full h-48 object-cover rounded-lg shadow-md mb-4">
+                    <h3 class="text-xl font-semibold text-gray-800">Pure Love</h3>
+                </div>
+                <!-- Gallery Item 6 -->
+                <div class="card overflow-hidden transition-transform duration-300 hover:scale-105">
+                    <img src="https://placehold.co/400x300/B0D5D5/2A4A4A?text=Future" alt="Future Photo" class="w-full h-48 object-cover rounded-lg shadow-md mb-4">
+                    <h3 class="text-xl font-semibold text-gray-800">Towards Forever</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RSVP Section -->
+    <section id="rsvp" class="section-padding bg-gradient-to-br from-pink-50 to-purple-50 text-center rounded-lg mx-4 mt-8 shadow-inner">
+        <div class="container mx-auto max-w-2xl glassmorphism p-8">
+            <h2 class="text-4xl font-bold text-pink-700 mb-8">RSVP</h2>
+            <p class="text-lg text-gray-700 mb-6">Please let us know if you can make it by [RSVP Date].</p>
+            <form class="space-y-4">
+                <div>
+                    <label for="name" class="block text-left text-gray-700 text-sm font-bold mb-2">Your Name:</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe" class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-pink-500" required>
+                </div>
+                <div>
+                    <label for="guests" class="block text-left text-gray-700 text-sm font-bold mb-2">Number of Guests (including yourself):</label>
+                    <input type="number" id="guests" name="guests" min="1" value="1" class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-pink-500" required>
+                </div>
+                <div>
+                    <label for="message" class="block text-left text-gray-700 text-sm font-bold mb-2">Message (Optional):</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Looking forward to celebrating with you!" class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-pink-500"></textarea>
+                </div>
+                <button type="submit" class="btn-primary w-full">Submit RSVP</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Contact/Location Section -->
+    <section id="contact" class="section-padding bg-white text-center rounded-lg mx-4 mt-8 shadow-lg mb-8">
+        <div class="container mx-auto max-w-4xl">
+            <h2 class="text-4xl font-bold text-purple-700 mb-8">When & Where</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="card">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">The Ceremony</h3>
+                    <p class="text-gray-700 text-lg mb-2"><strong class="text-pink-600">Date:</strong> Saturday, October 26, 2024</p>
+                    <p class="text-gray-700 text-lg mb-2"><strong class="text-pink-600">Time:</strong> 4:00 PM onwards</p>
+                    <p class="text-gray-700 text-lg mb-4"><strong class="text-pink-600">Venue:</strong> The Grand Ballroom, Elegant Gardens</p>
+                    <address class="text-gray-600 text-md">
+                        123 Love Lane,<br>
+                        Harmony City, HM 45678<br>
+                        <a href="https://maps.google.com/?q=Elegant+Gardens" target="_blank" class="text-blue-500 hover:underline">Get Directions</a>
+                    </address>
+                </div>
+                <div class="card">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Contact Us</h3>
+                    <p class="text-gray-700 text-lg mb-2"><strong class="text-pink-600">Email:</strong> <a href="mailto:prukhi.partner.wedding@example.com" class="text-blue-500 hover:underline">prukhi.partner.wedding@example.com</a></p>
+                    <p class="text-gray-700 text-lg"><strong class="text-pink-600">Phone:</strong> +1 (123) 456-7890</p>
+                    <p class="text-gray-600 mt-4">
+                        For any questions or special requests, please feel free to reach out to us.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white text-center p-6 rounded-t-lg mx-4">
+        <p>&copy; 2024 Prukhi & [Partner's Name]. All Rights Reserved.</p>
+        <p class="mt-2">Made with love for our special day.</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Mobile navigation toggle
+        const navToggle = document.getElementById('nav-toggle');
+        const navContent = document.getElementById('nav-content');
+
+        navToggle.addEventListener('click', () => {
+            navContent.classList.toggle('hidden');
+        });
+
+        // Hide mobile nav when a link is clicked
+        navContent.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (!navContent.classList.contains('hidden') && window.innerWidth < 1024) {
+                    navContent.classList.add('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

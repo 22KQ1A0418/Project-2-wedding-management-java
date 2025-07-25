@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RSVP - Prukhi & [Partner's Name]</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Inter Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #fdfaf6; /* Soft cream background */
+      color: #333;
+    }
+    .section-padding {
+      padding: 4rem 1rem;
+    }
+    @media (min-width: 768px) {
+      .section-padding {
+        padding: 6rem 2rem;
+      }
+    }
+    @media (min-width: 1024px) {
+      .section-padding {
+        padding: 8rem 4rem;
+      }
+    }
+    .btn-primary {
+      @apply px-6 py-3 bg-pink-600 text-white font-semibold rounded-lg shadow-md hover:bg-pink-700 transition-colors duration-300 transform hover:scale-105;
+    }
+    .card {
+      @apply bg-white p-6 rounded-lg shadow-lg flex flex-col items-center text-center;
+    }
+    .form-input {
+      @apply shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-pink-500;
+    }
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .modal-content {
+      background-color: #fefefe;
+      margin: auto;
+      padding: 2.5rem;
+      border-radius: 0.75rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      max-width: 90%;
+      width: 500px;
+      text-align: center;
+      position: relative;
+    }
+    .close-button {
+      color: #aaa;
+      position: absolute;
+      top: 1rem;
+      right: 1.5rem;
+      font-size: 2rem;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .close-button:hover,
+    .close-button:focus {
+      color: #333;
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body class="overflow-x-hidden flex flex-col min-h-screen">
+
+  <!-- Navbar -->
+ <nav class="bg-white shadow-[0_4px_20px_rgba(0,0,0,0.1)] px-4 py-1 flex items-center justify-between sticky top-0 z-50 rounded-b-lg">
+    <div class="flex items-center space-x-2">
+      <img src="pink.jpg" alt="Prukhi Wedding Logo" class="w-10 h-10 rounded-full shadow-md" />
+      <span class="text-lg font-bold text-gray-800">Prukhi</span>
+    </div>
+    <div class="block lg:hidden">
+      <button id="nav-toggle" class="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-gray-800 hover:border-gray-800">
+        <svg class="fill-current h-3 w-3" viewBox="0 0 20 20">
+          <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v15z"/>
+        </svg>
+      </button>
+    </div>
+    <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block" id="nav-content">
+      <ul class="text-lg lg:flex justify-end items-center mt-4 lg:mt-0 lg:space-x-8 w-full">
+        <li><a href="index.html" class="block mt-4 lg:inline-block text-gray-700 hover:text-pink-600 p-2">Home</a></li>
+        <li><a href="our-story.html" class="block mt-4 lg:inline-block text-gray-700 hover:text-pink-600 p-2">Our Story</a></li>
+        <li><a href="gallery.html" class="block mt-4 lg:inline-block text-gray-700 hover:text-pink-600 p-2">Gallery</a></li>
+        <li><a href="rsvp.html" class="block mt-4 lg:inline-block text-gray-700 hover:text-pink-600 p-2">RSVP</a></li>
+        <li><a href="contact.html" class="block mt-4 lg:inline-block text-gray-700 hover:text-pink-600 p-2">Contact</a></li>
+        <li><a href="login.html" class="block mt-4 lg:inline-block text-gray-700 hover:text-pink-600 p-2">Login</a></li>
+        <li><a href="register.html" class="block mt-4 lg:inline-block text-gray-700 hover:text-pink-600 p-2">Register</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main Section -->
+ <main class="flex-grow flex items-center justify-center section-padding bg-pink-600 bg-opacity-40">
+    <div class="container mx-auto max-w-4xl bg-white p-8 rounded-lg shadow-lg text-center">
+      <h2 class="text-4xl font-bold text-pink-700 mb-8">RSVP to Our Wedding</h2>
+      <p class="text-lg text-gray-700 mb-8">
+        We would be absolutely thrilled if you could join us on our special day.
+        Please let us know your attendance by <strong class="text-pink-600">October 1, 2024</strong>.
+      </p>
+
+      <div class="flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 md:space-x-12 mb-10">
+        <div class="flex flex-col items-center">
+          <img src="https://placehold.co/150x150/F0D9C1/4A2C2A?text=Bride" class="w-36 h-36 rounded-full object-cover shadow-md mb-3">
+          <p class="text-xl font-semibold text-gray-800">Prukhi</p>
+        </div>
+        <div class="text-6xl text-pink-600 font-bold">&amp;</div>
+        <div class="flex flex-col items-center">
+          <img src="https://placehold.co/150x150/B0D5D5/2A4A4A?text=Groom" class="w-36 h-36 rounded-full object-cover shadow-md mb-3">
+          <p class="text-xl font-semibold text-gray-800">[Partner's Name]</p>
+        </div>
+      </div>
+
+      <!-- RSVP Form -->
+      <form id="rsvp-form" class="space-y-6 max-w-lg mx-auto p-6 bg-white rounded-lg shadow-inner">
+        <div>
+          <label for="rsvp-name" class="block text-left text-gray-700 text-sm font-bold mb-2">Your Full Name:</label>
+          <input type="text" id="rsvp-name" name="rsvp-name" placeholder="John Doe" class="form-input" required>
+        </div>
+        <div>
+          <label for="rsvp-email" class="block text-left text-gray-700 text-sm font-bold mb-2">Your Email:</label>
+          <input type="email" id="rsvp-email" name="rsvp-email" placeholder="you@example.com" class="form-input" required>
+        </div>
+        <div>
+          <label for="attendance" class="block text-left text-gray-700 text-sm font-bold mb-2">Will you be attending?</label>
+          <select id="attendance" name="attendance" class="form-input" required>
+            <option value="">Please select...</option>
+            <option value="yes">Yes, with pleasure!</option>
+            <option value="no">No, unfortunately</option>
+          </select>
+        </div>
+        <div id="guest-count-field" class="hidden">
+          <label for="guests" class="block text-left text-gray-700 text-sm font-bold mb-2">Number of Guests (including yourself):</label>
+          <input type="number" id="guests" name="guests" min="1" value="1" class="form-input">
+        </div>
+        <div>
+          <label for="dietary-restrictions" class="block text-left text-gray-700 text-sm font-bold mb-2">Dietary Restrictions/Allergies (Optional):</label>
+          <textarea id="dietary-restrictions" name="dietary-restrictions" rows="3" class="form-input" placeholder="Vegetarian, Gluten-free, etc."></textarea>
+        </div>
+        <div>
+          <label for="song-request" class="block text-left text-gray-700 text-sm font-bold mb-2">Song Request (Optional):</label>
+          <input type="text" id="song-request" name="song-request" class="form-input" placeholder="Your favorite dancing tune!">
+        </div>
+        <button type="submit" class="btn-primary w-full">Submit RSVP</button>
+      </form>
+    </div>
+  </main>
+
+  <!-- Confirmation Modal -->
+  <div id="rsvp-modal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close-button">&times;</span>
+      <h3 class="text-3xl font-bold text-pink-700 mb-4">Thank You!</h3>
+      <p id="modal-message" class="text-lg text-gray-700 mb-6"></p>
+      <p class="text-gray-600">We appreciate your RSVP and look forward to celebrating together!</p>
+      <button id="modal-close-btn" class="btn-primary mt-6">Close</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white text-center p-6 rounded-t-lg mx-4 mt-8">
+    <p>&copy; 2024 Prukhi & [Partner's Name]. All Rights Reserved.</p>
+    <p class="mt-2">Made with love for our special day.</p>
+  </footer>
+
+  <!-- Script -->
+  <script>
+    const navToggle = document.getElementById('nav-toggle');
+    const navContent = document.getElementById('nav-content');
+    if (navToggle && navContent) {
+      navToggle.addEventListener('click', () => {
+        navContent.classList.toggle('hidden');
+      });
+      navContent.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          if (!navContent.classList.contains('hidden') && window.innerWidth < 1024) {
+            navContent.classList.add('hidden');
+          }
+        });
+      });
+    }
+
+    const rsvpForm = document.getElementById('rsvp-form');
+    const attendanceSelect = document.getElementById('attendance');
+    const guestCountField = document.getElementById('guest-count-field');
+    const rsvpModal = document.getElementById('rsvp-modal');
+    const closeModalButton = document.querySelector('.close-button');
+    const modalMessage = document.getElementById('modal-message');
+    const modalCloseBtn = document.getElementById('modal-close-btn');
+
+    attendanceSelect.addEventListener('change', function () {
+      if (this.value === 'yes') {
+        guestCountField.classList.remove('hidden');
+        document.getElementById('guests').setAttribute('required', 'true');
+      } else {
+        guestCountField.classList.add('hidden');
+        document.getElementById('guests').removeAttribute('required');
+        document.getElementById('guests').value = '1';
+      }
+    });
+
+    rsvpForm.addEventListener('submit', function (event) {
+      event.preventDefault();
+      const name = document.getElementById('rsvp-name').value;
+      const attendance = document.getElementById('attendance').value;
+      const guests = document.getElementById('guests').value;
+
+      let message = "";
+      if (attendance === "yes") {
+        message = `Thank you, ${name}! We're thrilled you'll be joining us with ${guests} guest(s)!`;
+      } else {
+        message = `Thank you, ${name}. We're sorry you can't make it, but appreciate your response.`;
+      }
+
+      modalMessage.textContent = message;
+      rsvpModal.classList.remove('hidden');
+      rsvpForm.reset();
+      guestCountField.classList.add('hidden');
+    });
+
+    function closeRsvpModal() {
+      rsvpModal.classList.add('hidden');
+    }
+
+    closeModalButton.addEventListener('click', closeRsvpModal);
+    modalCloseBtn.addEventListener('click', closeRsvpModal);
+    window.addEventListener('click', function (event) {
+      if (event.target == rsvpModal) {
+        closeRsvpModal();
+      }
+    });
+  </script>
+</body>
+</html>
